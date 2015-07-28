@@ -1,53 +1,97 @@
-<section class="panel panel-default"> 
-	<header class="panel-heading"> Responsive Table </header> 
-	<div class="row wrapper"> 
-		<div class="col-sm-5 m-b-xs"> 
-			<select class="input-sm form-control input-s-sm inline v-middle"> 
-				<option value="0">Bulk action</option> 
-				<option value="1">Delete selected</option> 
-				<option value="2">Bulk edit</option> 
-				<option value="3">Export</option> 
-			</select> 
-			<button class="btn btn-sm btn-default">Apply</button> 
-		</div> 
-		<div class="col-sm-4 m-b-xs"> 
-			<div class="btn-group" data-toggle="buttons"> 
-				<label class="btn btn-sm btn-default active"> <input type="radio" name="options" id="option1"> Day </label> 
-				<label class="btn btn-sm btn-default"> <input type="radio" name="options" id="option2"> Week </label> 
-				<label class="btn btn-sm btn-default"> <input type="radio" name="options" id="option2"> Month </label> 
-			</div> 
-		</div> 
-		<div class="col-sm-3"> 
-			<div class="input-group">
-				<input type="text" class="input-sm form-control" placeholder="Search"> 
-				<span class="input-group-btn"> <button class="btn btn-sm btn-default" type="button">Go!</button> </span> 
-			</div> 
-		</div> 
-	</div> 
-	<div class="table-responsive"> 
-		<table class="table table-striped b-t b-light"> 
-			<thead> <tr> 
-				<th width="20"><input type="checkbox"></th> 
-				<th class="th-sortable" data-toggle="class">Project 
-					<span class="th-sort"> <i class="fa fa-sort-down text"></i> <i class="fa fa-sort-up text-active"></i> <i class="fa fa-sort"></i> </span> 
-				</th> 
-				<th>Task</th> 
-				<th>Date</th> 
-				<th width="30"></th> 
-			</tr> 
-		</thead> 
-		<tbody> 
-			<tr> 
-				<td><input type="checkbox" name="post[]" value="2"></td> 
-				<td>Idrawfast</td> 
-				<td>4c</td> 
-				<td>Jul 25, 2013</td> 
-				<td> <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a> </td> 
-			</tr> 
-			<tr> 
-				<td><input type="checkbox" name="post[]" value="3"></td> 
-				<td>Formasa</td> 
-				<td>8c</td> 
-				<td>Jul 22, 2013</td> 
-				<td> <a href="#" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a> </td> 
-			</tr>
+<section>
+<div class="card">
+    <div class="card-header">
+        <h2><i class="fa fa-file"> Requisiciones </i><small> Historial de requisiciones</small></h2>
+    </div>
+    
+    <div class="table-responsive" style="overflow: hidden; outline: none;" tabindex="3">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Articulo</th>
+                    <th>Marca</th>
+                    <th width="150">Cantidad</th>
+                    <th width="150">P. Unitario</th>
+                    <th width="150">Total </th>
+                    <th>Informacion Adicional</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Alexandra</td>
+                    <td>Christopher</td>
+                    <td>@makinton</td>
+                    <td>Ducky</td>
+                    <td>Ducky</td>
+                    <td>Ducky</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Madeleine</td>
+                    <td>Hollaway</td>
+                    <td>@hollway</td>
+                    <td>Cheese</td>
+                    <td>Ducky</td>
+                    <td>Ducky</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sebastian</td>
+                    <td>Johnston</td>
+                    <td>@sebastian</td>
+                    <td>Jaycee</td>
+                    <td>Ducky</td>
+                    <td>Ducky</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Mitchell</td>
+                    <td>Christin</td>
+                    <td>@mitchell4u</td>
+                    <td>AdskiDeAnus</td>
+                    <td>Ducky</td>
+                    <td>Ducky</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Elizabeth</td>
+                    <td>Belkitt</td>
+                    <td>@belkitt</td>
+                    <td>Goat</td>
+                    <td>Ducky</td>
+                    <td>Ducky</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Benjamin</td>
+                    <td>Parnell</td>
+                    <td>@wayne234</td>
+                    <td>Pokie</td>
+                    <td>Ducky</td>
+                    <td>Ducky</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Katherine</td>
+                    <td>Buckland</td>
+                    <td>@anitabelle</td>
+                    <td>Wokie</td>
+                    <td>Ducky</td>
+                    <td>Ducky</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Nicholas</td>
+                    <td>Walmart</td>
+                    <td>@mwalmart</td>
+                    <td>Spike</td>
+                    <td>Ducky</td>
+                    <td>Ducky</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</section>
