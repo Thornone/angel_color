@@ -1,12 +1,12 @@
 <?php
 @session_start();
 
-#if ( !isset($_SESSION['userId']) ){
-#	header("Location: index.php");
-#	die;
-#}
+if ( !isset($_SESSION['userId']) ){
+	header("Location: index.php");
+	die;
+}
 
-#include 'db.php';
+include 'db.php';
 
 if ( isset($_GET['m']) ){
 	switch($_GET['m']) {
@@ -84,9 +84,6 @@ if ( isset($_GET['m']) ){
 		case "listareq":
 			$paginaPHP = "php/listareq.php";
 		break;
-
-
-
 	}
 } else {
 	$paginaPHP = "php/index.php";
@@ -106,8 +103,8 @@ $errorMsg = "";
  <!-- Plugin CSS  -->
  <link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css" media="screen">
  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-   <!-- Admin Forms CSS -->
-  <link rel="stylesheet" type="text/css" href="css/admin-forms.css">
+   <!--  Admin Forms CSS -->
+    <link rel="stylesheet" type="text/css" href="css/admin-forms.css">
 
 <script src="js/app.v1.js"></script>
 
@@ -121,13 +118,23 @@ $errorMsg = "";
 	<section class="vbox">
 		<header class="bg-black dk header navbar navbar-fixed-top-xs">
 			<div class="navbar-header aside-md">
-				<a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html"> <i class="fa fa-bars"></i> </a>
+				<a class="btn btn-link visible-xs" href="admin.php"> <i class="fa fa-home"></i> </a>
 				<a href="#" class="navbar-brand" data-toggle="fullscreen">Angel Color</a>
 				<a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a>
 			</div>
 			<ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user">
+				<li><a class="btn btn-link" href="admin.php"> <i class="fa fa-home"></i> </a></li>
+<?php
+			if ($_SESSION['userPv'] != "3"){
+?>				<li><a class="btn btn-link" href="admin.php?m=usuarios"> <i class="fa fa-users"></i> </a></li>
+				<li><a class="btn btn-link" href="admin.php?m=endozos"> <i class="fa fa-list"></i> </a></li>
+				<li><a class="btn btn-link" href="admin.php?m=recibos"> <i class="fa fa-list-alt"></i> </a></li>
+				<li><a class="btn btn-link" href="admin.php?m=agentes"> <i class="fa fa-male"></i> </a></li>
+<?php
+			}
+?>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="images/avatar_default.jpg"> </span> admin <b class="caret"></b> </a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="images/avatar_default.jpg"> </span> <?php echo $_SESSION['userNm']; ?><b class="caret"></b> </a>
 					<ul class="dropdown-menu animated fadeInRight"> <span class="arrow top"></span> 
 						<li class="divider"></li>
 						<li> <a href="cerrar.php">Salir</a> </li>
@@ -205,7 +212,7 @@ $errorMsg = "";
 	<script src="js/jquery.magnific-popup.js"></script>
 	<script src="js/moment.min.js"></script>
 	<script src="js/fullcalendar.min.js"></script>
-	<script src="js/utility.js"></script>
+	
 	<script src="js/demo.js"></script>
 	<script src="js/main.js"></script>
 	<script type="text/javascript">
@@ -358,8 +365,8 @@ $errorMsg = "";
   </script>
 
 	<script src="js/app.plugin.js"></script>
-
+ 
 	<div id="ui-monthpicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
-	<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+	<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div> 
 </body>
 </html>

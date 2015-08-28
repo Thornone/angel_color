@@ -8,7 +8,7 @@ $data = "anuncia2_frontera";
 $serv = "localhost";
 $user = "root";
 $pass = "";
-$data = "f403";
+$data = "f403_angelcolor";
 
 ### FUNCIONES DE SEGURIDAD ###
 function xss($vuln){
